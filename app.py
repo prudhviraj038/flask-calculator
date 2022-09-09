@@ -6,7 +6,10 @@ from keep_alive import keep_alive, app
 def main():
     return render_template("calculator.html")
 
-
+@app.route("/test", methods=["GET"])
+def test():
+    return "test"
+    
 @app.route("/calculate", methods=["POST"])
 def calculate():
     number_one = request.form["number_one"]
