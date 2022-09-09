@@ -8,8 +8,8 @@ def main():
 
 @app.route("/test", methods=["GET"])
 def test():
-    return "test"
-    
+    return render_template("calculator.html")
+
 @app.route("/calculate", methods=["POST"])
 def calculate():
     number_one = request.form["number_one"]
